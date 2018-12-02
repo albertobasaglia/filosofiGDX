@@ -20,7 +20,7 @@ public class FilosofiGame extends ApplicationAdapter implements InputProcessor {
 	@Override
 	public void create () {
 		Gdx.input.setInputProcessor(this);
-		this.n = 5;
+		this.n = 11;
 		this.width = Gdx.graphics.getWidth();
 		this.height = Gdx.graphics.getHeight();
 		this.step = Math.PI*2 / (double)this.n;
@@ -58,6 +58,7 @@ public class FilosofiGame extends ApplicationAdapter implements InputProcessor {
 		for(ForchettaSprite s: forchetteSprite) {
 			s.draw();
 		}
+		System.out.println(Gdx.graphics.getDeltaTime());
 	}
 	
 	@Override

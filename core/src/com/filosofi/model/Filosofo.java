@@ -25,10 +25,12 @@ public class Filosofo implements Runnable{
                     this.dx.prendi(sprite.getForkAx(), sprite.getForkAy());
                     Thread.sleep(1000);
                     this.sx.prendi(sprite.getForkBx(), sprite.getForkBy());
+                    Thread.sleep(1000);
                 } else {
                     this.sx.prendi(sprite.getForkBx(), sprite.getForkBy());
                     Thread.sleep(1000);
                     this.dx.prendi(sprite.getForkAx(), sprite.getForkAy());
+                    Thread.sleep(1000);
                 }
                 Random r = new Random();
                 int sleep = r.nextInt(5) + 1; // da 1 a 5
