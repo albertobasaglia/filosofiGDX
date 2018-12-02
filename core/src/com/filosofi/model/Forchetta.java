@@ -17,12 +17,10 @@ public class Forchetta {
     }
     public void prendi(int x, int y) {
         this.lock.lock();
-        sprite.setX(x);
-        sprite.setY(y);
+        sprite.moveTo(x,y);
     }
     public void lascia() {
         this.lock.unlock();
-        sprite.setX(sprite.getDefaultX());
-        sprite.setY(sprite.getDefaultY());
+        sprite.moveTo(sprite.getDefaultX(),sprite.getDefaultY());
     }
 }

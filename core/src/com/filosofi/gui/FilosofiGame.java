@@ -20,11 +20,11 @@ public class FilosofiGame extends ApplicationAdapter implements InputProcessor {
 	@Override
 	public void create () {
 		Gdx.input.setInputProcessor(this);
-		this.n = 11;
+		this.n = 5;
 		this.width = Gdx.graphics.getWidth();
 		this.height = Gdx.graphics.getHeight();
 		this.step = Math.PI*2 / (double)this.n;
-		this.radius = 200;
+		this.radius = 300;
 		forchetteSprite = new ForchettaSprite[this.n];
 		filosofiSprite = new FilosofoSprite[this.n];
 		for(int i=0 ; i<this.n ; i++) {
@@ -52,13 +52,18 @@ public class FilosofiGame extends ApplicationAdapter implements InputProcessor {
 	public void render () {
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+
 		for(FilosofoSprite s: filosofiSprite) {
 			s.draw();
 		}
 		for(ForchettaSprite s: forchetteSprite) {
+			if(s.isMoving()) {
+				s.step();
+			}
 			s.draw();
 		}
-		System.out.println(Gdx.graphics.getDeltaTime());
+
 	}
 	
 	@Override
