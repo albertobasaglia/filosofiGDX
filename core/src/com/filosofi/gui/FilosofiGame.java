@@ -18,7 +18,7 @@ public class FilosofiGame extends ApplicationAdapter{
 	private int radius;
 	@Override
 	public void create () {
-		this.n = 5;
+		this.n = 7;
 		this.width = Gdx.graphics.getWidth();
 		this.height = Gdx.graphics.getHeight();
 		this.step = Math.PI*2 / (double)this.n;
@@ -41,7 +41,7 @@ public class FilosofiGame extends ApplicationAdapter{
 			forchette[i] = new Forchetta(i,forchetteSprite[i]);
 		}
 		for(int i=0 ; i<this.n ; i++) {
-			filosofi[i] = new Filosofo(forchette[i],forchette[(i+1)%5],i,filosofiSprite[i]);
+			filosofi[i] = new Filosofo(forchette[i],forchette[(i+1)%this.n],i,filosofiSprite[i]);
 			new Thread(filosofi[i]).start();
 		}
 	}
