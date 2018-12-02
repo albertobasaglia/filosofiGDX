@@ -51,7 +51,4 @@ public class Filosofo implements Runnable{
             e.printStackTrace();
         }
     }
-    public int getId() {
-        return this.id;
-    }
 }

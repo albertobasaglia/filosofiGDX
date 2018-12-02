@@ -27,24 +27,10 @@ public class ForchettaSprite extends SpriteBatch {
         dim = 100;
         moving = false;
     }
-    public ForchettaSprite() {
-        this(0,0);
-    }
     public void draw() {
         super.begin();
         super.draw(img,x-dim/2,y-dim/2,dim,dim);
         super.end();
-    }
-    public static int getDim() {
-        return dim;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public void moveTo(int x,int y) {
@@ -79,29 +65,5 @@ public class ForchettaSprite extends SpriteBatch {
 
     public boolean isMoving() {
         return moving;
-    }
-
-    public double getMoveX() {
-        return moveX;
-    }
-
-    public double getMoveY() {
-        return moveY;
-    }
-
-    public double getMoveXtot() {
-        return moveXtot;
-    }
-
-    public double getMoveYtot() {
-        return moveYtot;
-    }
-
-    public void setMoveXtot(double moveXtot) {
-        this.moveXtot = moveXtot;
-    }
-
-    public void setMoveYtot(double moveYtot) {
-        this.moveYtot = moveYtot;
     }
 }

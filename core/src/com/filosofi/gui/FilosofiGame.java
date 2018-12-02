@@ -2,12 +2,11 @@ package com.filosofi.gui;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.GL20;
 import com.filosofi.model.Filosofo;
 import com.filosofi.model.Forchetta;
 
-public class FilosofiGame extends ApplicationAdapter implements InputProcessor {
+public class FilosofiGame extends ApplicationAdapter{
 	private ForchettaSprite[] forchetteSprite;
 	private FilosofoSprite[] filosofiSprite;
 	private Filosofo[] filosofi;
@@ -19,7 +18,6 @@ public class FilosofiGame extends ApplicationAdapter implements InputProcessor {
 	private int radius;
 	@Override
 	public void create () {
-		Gdx.input.setInputProcessor(this);
 		this.n = 5;
 		this.width = Gdx.graphics.getWidth();
 		this.height = Gdx.graphics.getHeight();
@@ -68,44 +66,4 @@ public class FilosofiGame extends ApplicationAdapter implements InputProcessor {
 	
 	@Override
 	public void dispose () {}
-
-	@Override
-	public boolean keyDown(int keycode) {
-		return false;
-	}
-
-	@Override
-	public boolean keyUp(int keycode) {
-		return false;
-	}
-
-	@Override
-	public boolean keyTyped(char character) {
-		return false;
-	}
-
-	@Override
-	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-		return false;
-	}
-
-	@Override
-	public boolean touchUp(int screenX, int screenY, int pointer, int button) {
-		return false;
-	}
-
-	@Override
-	public boolean touchDragged(int screenX, int screenY, int pointer) {
-		return false;
-	}
-
-	@Override
-	public boolean mouseMoved(int screenX, int screenY) {
-		return false;
-	}
-
-	@Override
-	public boolean scrolled(int amount) {
-		return false;
-	}
 }
