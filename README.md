@@ -1,7 +1,7 @@
 # Filosofi a cena
 Il progetto é stato realizzato con l'ausilio di LibGDX e Java 1.8
 
-##Le classi del progetto sono divise in 2 packages: gui e model.
+## Le classi del progetto sono divise in 2 packages: gui e model.
 
 ## Nel package gui si trovano le seguenti classi:
 1. FilosofiGame che contiene il codice che esegue il rendering degli sprite e muove gli oggetti
