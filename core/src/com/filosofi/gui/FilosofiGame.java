@@ -3,6 +3,8 @@ package com.filosofi.gui;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.filosofi.model.Filosofo;
 import com.filosofi.model.Forchetta;
 
@@ -16,8 +18,12 @@ public class FilosofiGame extends ApplicationAdapter{
 	private int height;
 	private double step;
 	private int radius;
+	private Texture tavoloTexture;
+	private SpriteBatch tavoloSprite;
 	@Override
 	public void create () {
+		this.tavoloTexture = new Texture("tavolo.png");
+		this.tavoloSprite = new SpriteBatch();
 		this.n = 7;
 		this.width = Gdx.graphics.getWidth();
 		this.height = Gdx.graphics.getHeight();
@@ -30,7 +36,7 @@ public class FilosofiGame extends ApplicationAdapter{
 			int y = (int) (Math.sin(angolo)*this.radius + height/2) ;
 			int x = (int) (Math.cos(angolo)*this.radius + width/2) ;
 			filosofiSprite[i] = new FilosofoSprite(x,y);
-			angolo += Math.PI/this.n;
+			//angolo += Math.PI/this.n;
 			y = (int) (Math.sin(angolo)*this.radius/3 + height/2) ;
 			x = (int) (Math.cos(angolo)*this.radius/3 + width/2) ;
 			forchetteSprite[i] = new ForchettaSprite(x,y);
@@ -50,8 +56,9 @@ public class FilosofiGame extends ApplicationAdapter{
 	public void render () {
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
-
+		this.tavoloSprite.begin();
+		this.tavoloSprite.draw(this.tavoloTexture,this.width/2 -150,this.height/2 -150,300,300);
+		this.tavoloSprite.end();
 		for(FilosofoSprite s: filosofiSprite) {
 			s.draw();
 		}
