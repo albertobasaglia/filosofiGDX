@@ -7,6 +7,8 @@ per esempio: `java -jar filosofi.jar 10` fa partire il programma con 10 filosofi
 
 per compilare il programma: `gradlew desktop:dist`
 
+quando un filosofo sta mangiando si illumina
+
 ![presentazione](https://i.imgur.com/d51S3j1.png)
 
 ## Le classi del progetto sono divise in 2 packages: gui e model.
