@@ -1,6 +1,14 @@
 # Filosofi a cena
 Il progetto é stato realizzato con l'ausilio di LibGDX e Java 1.8
 
+Il programma si puó avviare con  un parametro da console per scegliere il numero di filosofi
+
+per esempio: `java -jar filosofi.jar 10` fa partire il programma con 10 filosofi
+
+per compilare il programma: `gradlew desktop:dist`
+
+![presentazione](https://i.imgur.com/d51S3j1.png)
+
 ## Le classi del progetto sono divise in 2 packages: gui e model.
 
 ## Nel package gui si trovano le seguenti classi:
@@ -14,5 +22,7 @@ Il progetto é stato realizzato con l'ausilio di LibGDX e Java 1.8
 2. Forchetta codice che contiene la risorsa forchetta
 
 
-Il progetto si basa sull'utilizzo dei ReentrantLock. Ogni forchetta ne contiene uno ed esso viene usato dai Filosofi per prendere le forchette
+Il progetto si basa sull'utilizzo dei ReentrantLock. 
+
+Ogni forchetta ne contiene uno ed esso viene usato dai Filosofi per prendere le forchette
 

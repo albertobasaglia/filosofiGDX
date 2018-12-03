@@ -20,11 +20,16 @@ public class FilosofiGame extends ApplicationAdapter{
 	private int radius;
 	private Texture tavoloTexture;
 	private SpriteBatch tavoloSprite;
+	public FilosofiGame(int n) {
+		this.n = n;
+	}
+	public FilosofiGame() {
+		this.n = 7;
+	}
 	@Override
 	public void create () {
 		this.tavoloTexture = new Texture("tavolo.png");
 		this.tavoloSprite = new SpriteBatch();
-		this.n = 7;
 		this.width = Gdx.graphics.getWidth();
 		this.height = Gdx.graphics.getHeight();
 		this.step = Math.PI*2 / (double)this.n;
