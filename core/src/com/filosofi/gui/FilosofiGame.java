@@ -41,7 +41,7 @@ public class FilosofiGame extends ApplicationAdapter{
 			int y = (int) (Math.sin(angolo)*this.radius + height/2) ;
 			int x = (int) (Math.cos(angolo)*this.radius + width/2) ;
 			filosofiSprite[i] = new FilosofoSprite(x,y);
-			//angolo += Math.PI/this.n;
+			angolo += Math.PI/this.n;
 			y = (int) (Math.sin(angolo)*this.radius/3 + height/2) ;
 			x = (int) (Math.cos(angolo)*this.radius/3 + width/2) ;
 			forchetteSprite[i] = new ForchettaSprite(x,y);
